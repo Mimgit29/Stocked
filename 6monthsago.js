@@ -14,6 +14,8 @@ export async function scrape6()  {
   const browser = await puppeteer.launch({ 
     headless: true,
     args: [
+      '--no-sandbox', 
+      '--disable-setuid-sandbox',
       `--download.default_directory=${downloadPath}`,
       '--disable-extensions',
     ],
